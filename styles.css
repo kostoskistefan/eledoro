@@ -2,30 +2,28 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
     background: rgb(0, 166, 193);
     background: linear-gradient(34deg, rgba(0, 166, 193, 1) 0%, rgba(91, 81, 225, 1) 28%, rgba(179, 0, 255, 1) 100%) fixed;
 }
 
-.timer-container {
-    background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 1em;
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 h1 {
-    font-size: 2.5vmax;
-}
-
-::placeholder {
-    color: rgba(255, 255, 255, 0.25) !important;
+    font-size: 2.5vw;
 }
 
 span, input {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: transparent !important;
     text-align: center !important;
     border: none !important;
     outline: none !important;
     color: white !important;
-    font-size: 7vmax !important;
+    font-size: 5vw !important;
     box-shadow: none !important;
     letter-spacing: 0px;
     line-height: unset;
@@ -39,4 +37,33 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.navbar button:hover {
+    background-color: #555;
+}
+
+.timer-container {
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 1em;
+}
+
+#countdown {
+    font-size: 10vw;
+}
+
+#config-containers > div {
+    margin: 0 0.7vw;
+}
+
+#close:active {
+    background-color: tomato;
+}
+
+#minimize:active {
+    background-color: goldenrod;
+}
+
+#maximize:active {
+    background-color: teal;
 }

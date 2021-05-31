@@ -1,5 +1,4 @@
 (function () {
-    // Retrieve remote BrowserWindow
     const {BrowserWindow} = require('electron').remote
 
     function init() {
