@@ -1,0 +1,19 @@
+{
+  "name": "eledoro",
+  "version": "1.0.0",
+  "description": "Pomodoro timer created with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "pomodoro",
+    "timer"
+  ],
+  "author": "Kostoski Stefan",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.0.1"
+  }
+}
