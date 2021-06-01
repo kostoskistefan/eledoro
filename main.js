@@ -9,6 +9,8 @@ function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
+        minWidth: 600,
+        minHeight: 500,
         frame: false,
         webPreferences: {
             nodeIntegration: true,
@@ -19,7 +21,6 @@ function createWindow() {
 
     win.loadFile('index.html');
     win.maximize();
-    // win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
