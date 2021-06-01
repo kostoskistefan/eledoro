@@ -4,22 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Eledoro</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
-        integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/pomodoro.js"></script>
 </head>
 
 <body class="text-white d-flex flex-column">
 
-    <!-- Window Frame -->
     <nav class="navbar navbar-expand navbar-dark fixed-top bg-dark mb-3 p-0">
         <i class="text-warning navbar-brand far fa-clock mx-3 pl-3"></i>
         <p class="text-warning brand h4 align-self-center m-0 p-0">Eledoro</p>
@@ -44,29 +38,27 @@
         </div>
     </nav>
 
-    <!-- Main Container -->
-    <div class="mt-4 mb-3">
+    <div class="mt-4">
 
-        <!-- Countdown Container -->
-        <div class="text-center mx-3 p-3">
-            <h1 class="p-0 m-0 font-weight-bold py-3">Countdown</h1>
+        <div class="text-center pt-3">
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar m-0 p-0 bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h1 class="p-0 m-0 font-weight-bold pt-3">Countdown</h1>
             <h1 id="countdown" class="p-0 m-0 font-weight-bold">20:00</h1>
         </div>
 
-        <!-- Config Containers -->
-        <div class="fixed-bottom row mx-3 mb-3 pt-5">
-            <div class="col">
+        <div class="row mx-3">
+            <div class="col p-0 mg-r">
                 <div class="d-flex flex-row">
-                    <div class="col pb-3">
+                    <div class="col pb-3 setting-container mg-r my-3">
                         <h4 class="text-center font-weight-bold pt-4 pb-3">Pomodoro</h4>
-                        <div class="d-flex align-items-center justify-content-center text-center">
+                        <div class="d-flex align-items-center justify-content-center text-center px-4">
                             <div class="flex-column justify-content-center align-items-center">
                                 <button class="p-0 btn btn-link text-white" id="pomodoro-minute-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="pomodoro-minutes"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="20" readonly />
+                                <input id="pomodoro-minutes" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="20" readonly />
                                 <button class="p-0 btn btn-link text-white" id="pomodoro-minute-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -76,9 +68,7 @@
                                 <button class="p-0 btn btn-link text-white" id="pomodoro-second-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="pomodoro-seconds"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="00" readonly />
+                                <input id="pomodoro-seconds" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="00" readonly />
                                 <button class="p-0 btn btn-link text-white" id="pomodoro-second-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -86,16 +76,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col pb-3">
+                    <div class="col pb-3 setting-container mg-l my-3">
                         <h4 class="text-center font-weight-bold pt-4 pb-3">Short break</h4>
-                        <div class="d-flex align-items-center justify-content-center text-center">
+                        <div class="d-flex align-items-center justify-content-center text-center px-3">
                             <div class="flex-column justify-content-center align-items-center">
                                 <button class="p-0 btn btn-link text-white" id="short-break-minute-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="short-break-minutes"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="05" readonly />
+                                <input id="short-break-minutes" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="05" readonly />
                                 <button class="p-0 btn btn-link text-white" id="short-break-minute-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -105,9 +93,7 @@
                                 <button class="p-0 btn btn-link text-white" id="short-break-second-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="short-break-seconds"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="00" readonly />
+                                <input id="short-break-seconds" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="00" readonly />
                                 <button class="p-0 btn btn-link text-white" id="short-break-second-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -117,22 +103,19 @@
                     </div>
                 </div>
                 <div class="col m-0 p-0">
-                    <button class="col btn btn-success p-3 justify-self-center font-weight-bold"
-                        id="start">Start</button>
+                    <button class="col btn btn-success p-3 justify-self-center font-weight-bold" id="start">Start</button>
                 </div>
             </div>
-            <div class="col">
+            <div class="col p-0 mg-l">
                 <div class="d-flex flex-row">
-                    <div class="col pb-3">
+                    <div class="col pb-3 setting-container mg-r my-3">
                         <h4 class="text-center font-weight-bold pt-4 pb-3">Long break</h4>
-                        <div class="d-flex align-items-center justify-content-center text-center">
+                        <div class="d-flex align-items-center justify-content-center text-center px-3">
                             <div class="flex-column justify-content-center align-items-center">
                                 <button class="p-0 btn btn-link text-white" id="long-break-minute-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="long-break-minutes"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="10" readonly />
+                                <input id="long-break-minutes" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="10" readonly />
                                 <button class="p-0 btn btn-link text-white" id="long-break-minute-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -142,9 +125,7 @@
                                 <button class="p-0 btn btn-link text-white" id="long-break-second-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="long-break-seconds"
-                                    class="p-0 text-center form-control shadow-none font-weight-bold" type="number"
-                                    value="00" readonly />
+                                <input id="long-break-seconds" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="00" readonly />
                                 <button class="p-0 btn btn-link text-white" id="long-break-second-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -152,15 +133,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col pb-3">
+                    <div class="col pb-3 setting-container mg-l my-3">
                         <h4 class="text-center font-weight-bold pt-4 pb-3">Repeat</h4>
-                        <div class="d-flex align-items-center justify-content-center text-center">
+                        <div class="d-flex align-items-center justify-content-center text-center px-3">
                             <div class="flex-column justify-content-center align-items-center">
                                 <button class="p-0 btn btn-link text-white" id="repeat-up">
                                     <i class="fas fa-chevron-up fa-2x"></i>
                                 </button>
-                                <input id="repeats" class="p-0 text-center form-control shadow-none font-weight-bold"
-                                    type="number" value="4" readonly />
+                                <input id="repeats" class="p-0 text-center form-control shadow-none font-weight-bold" type="number" value="4" readonly />
                                 <button class="p-0 btn btn-link text-white" id="repeat-down">
                                     <i class="fas fa-chevron-down fa-2x"></i>
                                 </button>
@@ -170,8 +150,7 @@
                     </div>
                 </div>
                 <div class="col m-0 p-0">
-                    <button class="col btn btn-warning p-3 justify-self-center font-weight-bold"
-                        id="pause">Pause</button>
+                    <button class="col btn btn-outline-warning p-3 justify-self-center font-weight-bold" id="pause">Pause</button>
                 </div>
             </div>
         </div>

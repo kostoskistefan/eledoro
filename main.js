@@ -1,18 +1,23 @@
-const {
+const
+{
     app,
     BrowserWindow
 } = require('electron');
 
 app.disableHardwareAcceleration();
 
-function createWindow() {
-    const win = new BrowserWindow({
+function createWindow()
+{
+    const win = new BrowserWindow(
+    {
         width: 800,
         height: 600,
         minWidth: 600,
         minHeight: 500,
         frame: false,
-        webPreferences: {
+        icon: __dirname + "/assets/icon.png",
+        webPreferences:
+        {
             nodeIntegration: true,
             enableRemoteModule: true,
             contextIsolation: false,
@@ -23,11 +28,13 @@ function createWindow() {
     win.maximize();
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(() =>
+{
     createWindow()
 });
 
-app.on('window-all-closed', function () {
+app.on('window-all-closed', function ()
+{
     if (process.platform !== 'darwin')
         app.quit();
 });
