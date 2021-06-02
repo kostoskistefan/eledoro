@@ -1,5 +1,5 @@
-const window_handler = require('./js/window_handler');
-const settings = require('./js/settings');
+const window_handler = require(__dirname + '/js/window_handler');
+const settings = require(__dirname + '/js/settings');
 const player = require('play-sound')(opts = {});
 let modes = Object.freeze(
 {
@@ -130,7 +130,7 @@ settings.timer.on('done', () =>
         notify("Time's up! Lets get to work.");
     }
 
-    player.play('./assets/notification.mp3');
+    player.play(__dirname + '/assets/notification.mp3');
 });
 
 settings.timer.on('statusChanged', () =>
